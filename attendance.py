@@ -6,16 +6,28 @@ from datetime import datetime
 
 video_capture = cv2.VideoCapture(0)
 
+khushi_image = face_recognition.load_image_file("khushiface.png")
+khushi_encoding = face_recognition.face_encodings(khushi_image)[0]
 tirna_image = face_recognition.load_image_file("tirnaface.png")
 tirna_encoding = face_recognition.face_encodings(tirna_image)[0]
+shivani_image = face_recognition.load_image_file("shivaniface.png")
+shivani_encoding = face_recognition.face_encodings(shivani_image)[0]
+shrunjala_image = face_recognition.load_image_file("shrunjalaface.png")
+shrunjala_encoding = face_recognition.face_encodings(shrunjala_image)[0]
 # add more
 known_face_encoding = [
-tirna_encoding
+tirna_encoding,
+    khushi_encoding,
+    shrunjala_encoding,
+    shivani_encoding
 # add more
 ]
 
 known_faces_names = [
-"Tirna"
+"Tirna",
+    "Khushi",
+    "Shrunjala",
+    "Shivani"
 # add more
 ]
 
